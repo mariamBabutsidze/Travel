@@ -1,9 +1,9 @@
-Packages
-.build
-xcuserdata
-*.xcodeproj
-DerivedData/
 .DS_Store
-db.sqlite
-.swiftpm
-.env
+/.build
+/Packages
+/*.xcodeproj
+
+*.pins
+*.xcuserstate
+*.xcworkspacedata
+*.gitkeep
