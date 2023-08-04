@@ -19,6 +19,7 @@ public func configure(_ app: Application) async throws {
     ), as: .psql)
 
     app.migrations.add(CreateTrip())
+    app.migrations.add(CreateCategory())
 
     // register routes
     try routes(app)

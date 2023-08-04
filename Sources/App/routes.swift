@@ -10,13 +10,6 @@ func routes(_ app: Application) throws {
         "Hello, world!"
     }
     
-    app.post("api", "trip") { req -> EventLoopFuture<Trip> in
-        print("req", req)
-        let trip = try req.content.decode(Trip.self)
-        return trip.save(on: req.db).map {
-            trip
-        }
-    }
-    
     try app.register(collection: TripsController())
+    try app.register(collection: CategoriesController())
 }

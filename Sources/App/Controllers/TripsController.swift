@@ -21,9 +21,9 @@ struct TripsController: RouteCollection {
     }
     
     func create(req: Request) async throws -> Trip {
-        let todo = try req.content.decode(Trip.self)
-        try await todo.save(on: req.db)
-        return todo
+        let trips = try req.content.decode(Trip.self)
+        try await trips.save(on: req.db)
+        return trips
     }
     
     func delete(req: Request) async throws -> HTTPStatus {
